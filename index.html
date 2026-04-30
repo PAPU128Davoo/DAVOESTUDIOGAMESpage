@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAVOESTUDIO GAMES - SUSCRIPCIÓN</title>
+    <style>
+        :root {
+            --primary: #00ff88;
+            --bg: #0d1117;
+            --card-bg: #161b22;
+            --text: #c9d1d9;
+            --accent: #f1e05a;
+            --hot: #ff4444;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Pantalla de Bloqueo */
+        #lock-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg); z-index: 9999;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+        }
+        .lock-card {
+            background: var(--card-bg); padding: 30px;
+            border-radius: 15px; border: 2px solid var(--primary);
+            box-shadow: 0 0 20px rgba(0,255,136,0.2);
+        }
+        input { padding: 12px; border-radius: 5px; border: none; width: 200px; margin-bottom: 10px; }
+        .btn-entrar {
+            padding: 12px 25px; background: var(--primary); border: none;
+            border-radius: 5px; cursor: pointer; font-weight: bold; color: #0d1117;
+        }
+
+        /* Estilo de la Web */
+        header { text-align: center; margin-bottom: 50px; }
+        header h1 { font-size: 2.8rem; color: white; letter-spacing: 1px; }
+
+        .grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px; width: 100%; max-width: 1000px; margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card-bg); border: 1px solid #30363d;
+            border-radius: 15px; padding: 35px 20px; text-align: center;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none; color: inherit;
+            position: relative;
+        }
+        .card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,255,136,0.1); }
+        .card h2 { margin: 0; color: white; font-size: 1.3rem; }
+
+        .tag { font-size: 0.7rem; color: var(--accent); font-weight: bold; margin-bottom: 10px; display: block; }
+        .tag-hot { color: var(--hot); font-size: 0.8rem; font-weight: 900; text-shadow: 0 0 5px rgba(255,68,68,0.5); }
+
+        .donation-box {
+            background: #21262d; border: 2px dashed #30363d;
+            border-radius: 15px; padding: 20px; max-width: 500px; text-align: center; cursor: pointer;
+        }
+        summary { font-weight: bold; color: var(--accent); list-style: none; }
+        .donation-content { margin-top: 15px; background: #161b22; padding: 10px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <!-- PANTALLA DE BLOQUEO -->
+    <div id="lock-screen">
+        <div class="lock-card">
+            <h1>🔐 ZONA VIP DAVOESTUDIO</h1>
+            <p>Acceso exclusivo por <b>5€/mes</b>.</p>
+            <input type="password" id="pass-input" placeholder="Código mensual">
+            <br>
+            <button class="btn-entrar" onclick="checkPass()">ENTRAR A JUGAR</button>
+            <p style="font-size: 0.8rem; color: #8b949e; margin-top: 15px;">
+                ¿No tienes código? Págaselo a David en persona.
+            </p>
+        </div>
+    </div>
+
+    <header>
+        <h1>DAVOESTUDIO GAMES</h1>
+        <p>Tu portal de acceso a los títulos exclusivos de Davoestudio.</p>
+    </header>
+
+    <div class="grid">
+        <a href="https://github.io" class="card">
+            <span class="tag">¡NUEVO!</span>
+            <h2>SURVIVAL DAVO</h2>
+        </a>
+
+        <a href="https://github.io" class="card">
+            <span class="tag tag-hot">🔥 HOT!!! 🔥</span>
+            <h2>BYPASSCORE</h2>
+        </a>
+
+        <a href="https://github.io" class="card">
+            <h2>COPIÓN</h2>
+        </a>
+
+        <a href="https://github.io" class="card">
+            <h2>SUPERCAREXTREME</h2>
+        </a>
+
+        <a href="https://github.io" class="card">
+            <h2>MEMORYPLUS</h2>
+        </a>
+
+        <a href="https://github.io" class="card">
+            <h2>MONEY CLICKER</h2>
+        </a>
+    </div>
+
+    <details class="donation-box">
+        <summary>💰 ¡Ayúdame con una propina!</summary>
+        <div class="donation-content">
+            Puedes dejarle una propina a David dándole el dinero en persona, ¡te lo agradecerá mucho!
+        </div>
+    </details>
+
+    <script>
+        // LA CONTRASEÑA SIGUE SIENDO: pc2024
+        function checkPass() {
+            const pass = document.getElementById('pass-input').value;
+            if (pass === "pc2024") {
+                document.getElementById('lock-screen').style.display = 'none';
+            } else {
+                alert("Código incorrecto. Habla con David para renovar tu suscripción.");
+            }
+        }
+    </script>
+</body>
+</html>
