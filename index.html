@@ -23,31 +23,31 @@
             align-items: center;
         }
         header { text-align: center; margin-bottom: 30px; }
-        header h1 { font-size: 2.8rem; color: white; letter-spacing: 1px; }
+        header h1 { font-size: 2.5rem; color: white; }
 
         .grid {
-            display: grid; 
+            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px; 
-            width: 100%; 
+            gap: 20px;
+            width: 100%;
             max-width: 1000px;
         }
 
         .card {
-            background: var(--card-bg); 
+            background: var(--card-bg);
             border: 1px solid #30363d;
-            border-radius: 15px; 
+            border-radius: 15px;
             overflow: hidden;
             transition: 0.3s;
-            text-decoration: none; 
+            text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
         }
-        .card:hover { 
-            transform: translateY(-8px); 
-            border-color: var(--primary); 
-            box-shadow: 0 8px 20px rgba(0,255,136,0.15); 
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 8px 20px rgba(0,255,136,0.15);
         }
 
         .thumb {
@@ -56,17 +56,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3.5rem;
+            font-size: 3rem;
             border-bottom: 1px solid #30363d;
         }
 
         .card-info { padding: 15px; text-align: center; }
-        .card-info h2 { margin: 0; color: white; font-size: 1.2rem; }
+        .card-info h2 { margin: 0; color: white; font-size: 1.1rem; }
         .tag { font-size: 0.7rem; color: var(--accent); font-weight: bold; margin-bottom: 5px; display: block; }
 
         .lock-container {
             background: #1c2128;
-            padding: 40px;
+            padding: 30px;
             border-radius: 15px;
             border: 2px solid var(--primary);
             text-align: center;
@@ -74,8 +74,8 @@
             width: 100%;
             max-width: 500px;
         }
-        input { padding: 12px; border-radius: 5px; border: none; width: 200px; margin-bottom: 15px; text-align: center; outline: none; }
-        .btn { padding: 12px 25px; background: var(--primary); border: none; border-radius: 5px; cursor: pointer; font-weight: bold; color: #0d1117; }
+        input { padding: 12px; border-radius: 5px; border: none; width: 180px; margin-bottom: 10px; text-align: center; outline: none; }
+        .btn { padding: 12px 20px; background: var(--primary); border: none; border-radius: 5px; cursor: pointer; font-weight: bold; color: #0d1117; }
 
         #vip-section { display: none; width: 100%; max-width: 1000px; }
     </style>
@@ -87,11 +87,11 @@
     <p>Portal VIP de acceso exclusivo</p>
 </header>
 
-<!-- JUEGOS GRATUITOS -->
+<!-- SECCIÓN GRATUITA -->
 <h3 style="color: var(--primary)">🔓 JUEGOS GRATUITOS</h3>
 <div class="grid">
     <!-- BYPASSCORE -->
-    <a href="https://papu128davoo.github.io/BypassCore-10T/" target="_blank" class="card">
+    <a href="https://github.io" target="_blank" class="card">
         <div class="thumb" style="background: linear-gradient(45deg, #00ff88, #006e3b);">🛡️</div>
         <div class="card-info">
             <span class="tag">GRATIS</span>
@@ -100,7 +100,7 @@
     </a>
 
     <!-- MEMORY PLUS -->
-    <a href="https://papu128davoo.github.io/MemoryPlus/" target="_blank" class="card">
+    <a href="https://github.io" target="_blank" class="card">
         <div class="thumb" style="background: linear-gradient(45deg, #5a8eff, #0047ab);">🧩</div>
         <div class="card-info">
             <span class="tag">GRATIS</span>
@@ -114,7 +114,7 @@
 <!-- BLOQUEO VIP -->
 <div id="lock-screen" class="lock-container">
     <h2 style="color: white;">🔐 ZONA VIP</h2>
-    <p>Introduce el código para desbloquear el catálogo premium.</p>
+    <p>Ingresa tu código para desbloquear el catálogo premium.</p>
     <input type="password" id="pass-input" placeholder="Código mensual">
     <br>
     <button class="btn" onclick="checkPass()">ENTRAR AL CATÁLOGO</button>
@@ -125,7 +125,7 @@
     <h3 style="color: var(--accent); text-align: center; margin-bottom: 20px;">👑 CATÁLOGO EXCLUSIVO</h3>
     <div class="grid">
         <!-- SUBWAY SURFERS -->
-        <a href="https://yell0wsuit.page/assets/games/subway-surfers-unity/index.html" target="_blank" class="card">
+        <a href="https://yell0wsuit.page" target="_blank" class="card">
             <div class="thumb" style="background: #f1e05a;">🏃</div>
             <div class="card-info">
                 <span class="tag">PREMIUM</span>
@@ -133,8 +133,17 @@
             </div>
         </a>
 
+        <!-- TEMPLE RUN 2 -->
+        <a href="https://yell0wsuit.page" target="_blank" class="card">
+            <div class="thumb" style="background: #8b4513;">🗿</div>
+            <div class="card-info">
+                <span class="tag">PREMIUM</span>
+                <h2>TEMPLE RUN 2</h2>
+            </div>
+        </a>
+
         <!-- CROSSY ROAD -->
-        <a href="https://yell0wsuit.page/assets/games/crossy-road/index.html" target="_blank" class="card">
+        <a href="https://yell0wsuit.page" target="_blank" class="card">
             <div class="thumb" style="background: #ffffff;">🐔</div>
             <div class="card-info">
                 <span class="tag">PREMIUM</span>
@@ -143,7 +152,7 @@
         </a>
 
         <!-- CUT THE ROPE -->
-        <a href="https://yell0wsuit.page/assets/games/CutTheRope/index.html" target="_blank" class="card">
+        <a href="https://yell0wsuit.page" target="_blank" class="card">
             <div class="thumb" style="background: #00ff88;">🍬</div>
             <div class="card-info">
                 <span class="tag">PREMIUM</span>
@@ -151,8 +160,17 @@
             </div>
         </a>
 
+        <!-- SUPER CAR EXTREME -->
+        <a href="https://github.io" target="_blank" class="card">
+            <div class="thumb" style="background: #ff4444;">🏎️</div>
+            <div class="card-info">
+                <span class="tag">PREMIUM</span>
+                <h2>SUPER CAR EXTREME</h2>
+            </div>
+        </a>
+
         <!-- SURVIVAL DAVO -->
-        <a href="https://papu128davoo.github.io/SurvivalDAVO/" target="_blank" class="card">
+        <a href="https://github.io" target="_blank" class="card">
             <div class="thumb" style="background: #0d6e35;">🌲</div>
             <div class="card-info">
                 <span class="tag">PREMIUM</span>
@@ -161,20 +179,11 @@
         </a>
 
         <!-- COPIÓN -->
-        <a href="https://papu128davoo.github.io/Copion-2E/" target="_blank" class="card">
+        <a href="https://github.io" target="_blank" class="card">
             <div class="thumb" style="background: #6e6e6e;">✍️</div>
             <div class="card-info">
                 <span class="tag">PREMIUM</span>
                 <h2>COPIÓN</h2>
-            </div>
-        </a>
-
-        <!-- SUPER CAR EXTREME -->
-        <a href="https://papu128davoo.github.io/SuperCarExtreme/" target="_blank" class="card">
-            <div class="thumb" style="background: #ff4444;">🏎️</div>
-            <div class="card-info">
-                <span class="tag">PREMIUM</span>
-                <h2>SUPER CAR EXTREME</h2>
             </div>
         </a>
     </div>
@@ -196,3 +205,4 @@
 
 </body>
 </html>
+
