@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAVOESTUDIO GAMES - SUSCRIPCIÓN</title>
+    <title>DAVOESTUDIO GAMES</title>
     <style>
         :root {
             --primary: #00ff88;
@@ -23,121 +23,137 @@
             flex-direction: column;
             align-items: center;
         }
+        header { text-align: center; margin-bottom: 30px; }
+        header h1 { font-size: 2.8rem; color: white; letter-spacing: 1px; margin-bottom: 5px; }
 
-        /* Pantalla de Bloqueo */
-        #lock-screen {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--bg); z-index: 9999;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        .grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px; 
+            width: 100%; 
+            max-width: 1000px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: var(--card-bg); 
+            border: 1px solid #30363d;
+            border-radius: 15px; 
+            padding: 35px 20px; 
             text-align: center;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none; 
+            color: inherit;
+            display: block;
         }
-        .lock-card {
-            background: var(--card-bg); padding: 30px;
-            border-radius: 15px; border: 2px solid var(--primary);
-            box-shadow: 0 0 20px rgba(0,255,136,0.2);
+        .card:hover { 
+            transform: translateY(-8px); 
+            border-color: var(--primary); 
+            box-shadow: 0 5px 15px rgba(0,255,136,0.1); 
         }
-        input { padding: 12px; border-radius: 5px; border: none; width: 200px; margin-bottom: 10px; }
+        .card h2 { margin: 0; color: white; font-size: 1.3rem; }
+        .tag { font-size: 0.7rem; color: var(--accent); font-weight: bold; margin-bottom: 10px; display: block; }
+
+        /* Contenedor de Bloqueo */
+        .lock-container {
+            background: #1c2128;
+            padding: 40px;
+            border-radius: 15px;
+            border: 2px solid var(--primary);
+            text-align: center;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 600px;
+        }
+        input { 
+            padding: 12px; border-radius: 5px; border: none; 
+            width: 200px; margin-bottom: 15px; text-align: center; outline: none;
+            font-size: 1rem;
+        }
         .btn-entrar {
             padding: 12px 25px; background: var(--primary); border: none;
             border-radius: 5px; cursor: pointer; font-weight: bold; color: #0d1117;
         }
 
-        /* Estilo de la Web */
-        header { text-align: center; margin-bottom: 50px; }
-        header h1 { font-size: 2.8rem; color: white; letter-spacing: 1px; }
-
-        .grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px; width: 100%; max-width: 1000px; margin-bottom: 40px;
-        }
-
-        .card {
-            background: var(--card-bg); border: 1px solid #30363d;
-            border-radius: 15px; padding: 35px 20px; text-align: center;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none; color: inherit;
-            position: relative;
-        }
-        .card:hover { transform: translateY(-8px); border-color: var(--primary); box-shadow: 0 5px 15px rgba(0,255,136,0.1); }
-        .card h2 { margin: 0; color: white; font-size: 1.3rem; }
-
-        .tag { font-size: 0.7rem; color: var(--accent); font-weight: bold; margin-bottom: 10px; display: block; }
-        .tag-hot { color: var(--hot); font-size: 0.8rem; font-weight: 900; text-shadow: 0 0 5px rgba(255,68,68,0.5); }
-
         .donation-box {
             background: #21262d; border: 2px dashed #30363d;
-            border-radius: 15px; padding: 20px; max-width: 500px; text-align: center; cursor: pointer;
+            border-radius: 15px; padding: 20px; max-width: 500px; text-align: center; margin-top: 40px;
         }
-        summary { font-weight: bold; color: var(--accent); list-style: none; }
-        .donation-content { margin-top: 15px; background: #161b22; padding: 10px; border-radius: 10px; }
+        summary { cursor: pointer; color: var(--accent); font-weight: bold; list-style: none; }
     </style>
 </head>
 <body>
 
-    <!-- PANTALLA DE BLOQUEO -->
-    <div id="lock-screen">
-        <div class="lock-card">
-            <h1>🔐 ZONA VIP DAVOESTUDIO</h1>
-            <p>Acceso exclusivo por <b>5€/mes</b>.</p>
-            <input type="password" id="pass-input" placeholder="Código mensual">
-            <br>
-            <button class="btn-entrar" onclick="checkPass()">ENTRAR A JUGAR</button>
-            <p style="font-size: 0.8rem; color: #8b949e; margin-top: 15px;">
-                ¿No tienes código? Págaselo a David en persona.
-            </p>
-        </div>
-    </div>
+<header>
+    <h1>DAVOESTUDIO GAMES</h1>
+    <p>Juega a la demo gratuita o desbloquea el catálogo VIP.</p>
+</header>
 
-    <header>
-        <h1>DAVOESTUDIO GAMES</h1>
-        <p>Tu portal de acceso a los títulos exclusivos de Davoestudio.</p>
-    </header>
+<!-- JUEGO GRATUITO: BYPASSCORE -->
+<h3 style="color: var(--primary); margin-bottom: 20px;">🔓 JUEGO GRATUITO</h3>
+<div class="grid">
+    <a href="https://papu128davoo.github.io/BypassCore-10T/" target="_blank" class="card">
+        <span class="tag" style="color: #00d4ff;">✨ PRUEBA GRATIS</span>
+        <h2>BYPASSCORE</h2>
+    </a>
+</div>
 
+<hr style="width: 100%; max-width: 1000px; border: 0; border-top: 1px solid #30363d; margin: 40px 0;">
+
+<!-- ACCESO VIP -->
+<div id="lock-screen" class="lock-container">
+    <h2 style="color: white;">🔐 ZONA VIP</h2>
+    <p>Introduce el código para desbloquear el resto de juegos.</p>
+    <input type="password" id="pass-input" placeholder="Código mensual">
+    <br>
+    <button class="btn-entrar" onclick="checkPass()">DESBLOQUEAR CATÁLOGO</button>
+    <p style="font-size: 0.8rem; color: #8b949e; margin-top: 15px;">¿No tienes código? Págaselo a David en persona.</p>
+</div>
+
+<!-- SECCIÓN VIP: OCULTA -->
+<div id="vip-section" style="display: none; width: 100%; max-width: 1000px;">
+    <h3 style="color: var(--accent); text-align: center; margin-bottom: 20px;">👑 CATÁLOGO EXCLUSIVO</h3>
     <div class="grid">
-        <a href="https://github.io" class="card">
-            <span class="tag">¡NUEVO!</span>
+        <a href="https://papu128davoo.github.io/SurvivalDAVO/" target="_blank" class="card">
+            <span class="tag">🌲 SUPERVIVENCIA</span>
             <h2>SURVIVAL DAVO</h2>
         </a>
-
-        <a href="https://github.io" class="card">
-            <span class="tag tag-hot">🔥 HOT!!! 🔥</span>
-            <h2>BYPASSCORE</h2>
-        </a>
-
-        <a href="https://github.io" class="card">
+        <a href="https://papu128davoo.github.io/Copion-2E/" target="_blank" class="card">
+            <span class="tag">¡ACTUALIZADO!</span>
             <h2>COPIÓN</h2>
         </a>
-
-        <a href="https://github.io" class="card">
-            <h2>SUPERCAREXTREME</h2>
+        <a href="https://papu128davoo.github.io/MemoryPlus/" target="_blank" class="card">
+            <span class="tag">🧩 MEMORIA</span>
+            <h2>MEMORY PLUS</h2>
         </a>
-
-        <a href="https://github.io" class="card">
-            <h2>MEMORYPLUS</h2>
-        </a>
-
-        <a href="https://github.io" class="card">
-            <h2>MONEY CLICKER</h2>
+        <a href="https://papu128davoo.github.io/SuperCarExtreme/" target="_blank" class="card">
+            <span class="tag">🏎️ VELOCIDAD</span>
+            <h2>SUPER CAR EXTREME</h2>
         </a>
     </div>
+</div>
 
-    <details class="donation-box">
-        <summary>💰 ¡Ayúdame con una propina!</summary>
-        <div class="donation-content">
-            Puedes dejarle una propina a David dándole el dinero en persona, ¡te lo agradecerá mucho!
-        </div>
-    </details>
+<details class="donation-box">
+    <summary>💰 ¡Ayúdame con una propina!</summary>
+    <p style="margin-top: 15px;">Puedes dejarle una propina a David dándole el dinero en persona. ¡Gracias!</p>
+</details>
 
-    <script>
-        // LA CONTRASEÑA SIGUE SIENDO: pc2024
-        function checkPass() {
-            const pass = document.getElementById('pass-input').value;
-            if (pass === "pc2024") {
-                document.getElementById('lock-screen').style.display = 'none';
-            } else {
-                alert("Código incorrecto. Habla con David para renovar tu suscripción.");
-            }
+<script>
+    // Enter para entrar
+    document.getElementById('pass-input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') { checkPass(); }
+    });
+
+    function checkPass() {
+        const pass = document.getElementById('pass-input').value;
+        if (pass === "pc2024") {
+            document.getElementById('lock-screen').style.display = 'none';
+            document.getElementById('vip-section').style.display = 'block';
+        } else {
+            alert("Código incorrecto. Habla con David.");
         }
-    </script>
+    }
+</script>
+
 </body>
 </html>
